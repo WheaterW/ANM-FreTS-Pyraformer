@@ -49,3 +49,4 @@ The code base is mainly modified from [Time Series Library (TSlib)](https://gith
    bash ./scripts/test-only/Tests.sh	# only contains four configurations to reproduce the figures in the report
    ```
 
+5. Checkpoints are stored in `./checkpoints/*/` in `pth` format. Test results are stored in `./results/*/` in `npy` format. Visualization of predictions are stored in `./test_results/*/` in `pdf` format.
