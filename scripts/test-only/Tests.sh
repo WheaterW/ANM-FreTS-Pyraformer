@@ -1,0 +1,81 @@
+python -u run.py \
+  --task_name long_term_forecast \
+  --is_training 0 \
+  --root_path ./dataset/ \
+  --data_path SMD.csv \
+  --model_id SMD_96_720 \
+  --model FreTS \
+  --data SMD_csv \
+  --features MS \
+  --seq_len 96 \
+  --pred_len 720 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 38 \
+  --dec_in 38 \
+  --c_out 38 \
+  --des 'Exp' \
+  --itr 1 
+
+  python -u run.py \
+  --task_name long_term_forecast \
+  --is_training 0 \
+  --root_path ./dataset/ \
+  --data_path SMD.csv \
+  --model_id SMD_96_720 \
+  --model Pyraformer \
+  --data SMD_csv \
+  --features MS \
+  --seq_len 96 \
+  --pred_len 720 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 38 \
+  --dec_in 38 \
+  --c_out 38 \
+  --des 'Exp' \
+  --itr 1 
+
+  python -u run.py \
+  --task_name long_term_forecast \
+  --is_training 0 \
+  --root_path ./dataset/ \
+  --data_path weather.csv \
+  --model_id weather_96_192 \
+  --model FreTS \
+  --data custom \
+  --features MS \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 192 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 21 \
+  --dec_in 21 \
+  --c_out 21 \
+  --des 'Exp' \
+  --itr 1
+
+python -u run.py \
+  --task_name long_term_forecast \
+  --is_training 0 \
+  --root_path ./dataset/ \
+  --data_path weather.csv \
+  --model_id weather_96_192 \
+  --model Pyraformer\
+  --data custom \
+  --features M \
+  --seq_len 96 \
+  --label_len 48 \
+  --pred_len 192 \
+  --e_layers 2 \
+  --d_layers 1 \
+  --factor 3 \
+  --enc_in 21 \
+  --dec_in 21 \
+  --c_out 21 \
+  --des 'Exp' \
+  --itr 1
